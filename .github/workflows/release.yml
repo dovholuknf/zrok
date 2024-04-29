@@ -316,6 +316,19 @@ jobs:
           name: release-builds
           path: ./dist/*.gz
 
+  sign-windows:
+    needs: [build-linux-amd64, build-linux-arm, build-linux-arm64, build-darwin, build-windows]
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - run: |
+          mkdir -p ./automated-release-build
+
+      - uses: actions/download-artifact@v3
+        with:
+          path: ./automated-release-build
+    
   publish-release:
     # allow skipped but not failed
     if: ${{
@@ -326,7 +339,7 @@ jobs:
           && (needs.build-darwin.result      == 'success' || needs.build-darwin.result      == 'skipped')
           && (needs.build-windows.result     == 'success' || needs.build-windows.result     == 'skipped')
       }}
-    needs: [build-linux-amd64, build-linux-arm, build-linux-arm64, build-darwin, build-windows]
+    needs: [sign-windows]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
