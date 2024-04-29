@@ -8,12 +8,9 @@ permissions:
   contents: write
 
 env:
-  ZITI_DEB_PROD_REPO: ${{ vars.ZITI_DEB_PROD_REPO || 'zitipax-openziti-deb-stable' }}
-  ZITI_RPM_PROD_REPO: ${{ vars.ZITI_RPM_PROD_REPO || 'zitipax-openziti-rpm-stable' }}
   JFROG_CLI_VERSION: ${{ vars.JFROG_CLI_VERSION || '2.50.4' }}
 
 jobs:
-
   build-windows:
     runs-on: ubuntu-latest
     steps:
@@ -57,7 +54,7 @@ jobs:
           path: ./dist/*.gz
 
   sign-windows:
-    needs: [build-linux-amd64, build-linux-arm, build-linux-arm64, build-windows]
+    needs: [build-windows]
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
