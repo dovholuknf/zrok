@@ -1,6 +1,6 @@
 module github.com/openziti/zrok
 
-go 1.21
+go 1.22.5
 
 require (
 	github.com/TwiN/go-away v1.6.12
@@ -47,7 +47,7 @@ require (
 	github.com/shirou/gopsutil/v3 v3.24.3
 	github.com/sirupsen/logrus v1.9.3
 	github.com/songgao/water v0.0.0-20200317203138-2b4b6d7c09d8
-	github.com/spf13/cobra v1.8.0
+	github.com/spf13/cobra v1.8.1
 	github.com/stretchr/testify v1.9.0
 	github.com/wneessen/go-mail v0.2.7
 	github.com/zitadel/oidc/v2 v2.12.0
@@ -85,7 +85,7 @@ require (
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/chzyer/readline v1.5.1 // indirect
 	github.com/containerd/console v1.0.3 // indirect
-	github.com/cpuguy83/go-md2man/v2 v2.0.3 // indirect
+	github.com/cpuguy83/go-md2man/v2 v2.0.4 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/deepmap/oapi-codegen v1.8.2 // indirect
 	github.com/dgraph-io/badger v1.6.2 // indirect
@@ -172,6 +172,7 @@ require (
 	github.com/oklog/ulid v1.3.1 // indirect
 	github.com/onsi/ginkgo/v2 v2.9.5 // indirect
 	github.com/opentracing/opentracing-go v1.2.0 // indirect
+	github.com/openziti/cobra-to-md v0.0.0-20240827122906-40d67b475e7d // indirect
 	github.com/openziti/foundation/v2 v2.0.42 // indirect
 	github.com/openziti/metrics v1.2.51 // indirect
 	github.com/openziti/secretstream v0.1.19 // indirect
