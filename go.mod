@@ -1,6 +1,6 @@
 module github.com/openziti/zrok
 
-go 1.21
+go 1.22.5
 
 require (
 	github.com/TwiN/go-away v1.6.12
@@ -48,7 +48,7 @@ require (
 	github.com/shirou/gopsutil/v3 v3.24.5
 	github.com/sirupsen/logrus v1.9.3
 	github.com/songgao/water v0.0.0-20200317203138-2b4b6d7c09d8
-	github.com/spf13/cobra v1.8.0
+	github.com/spf13/cobra v1.8.1
 	github.com/stretchr/testify v1.9.0
 	github.com/wneessen/go-mail v0.2.7
 	github.com/zitadel/oidc/v2 v2.12.0
